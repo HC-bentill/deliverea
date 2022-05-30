@@ -1,0 +1,5 @@
+.bg{
+    background-image: url(../assets/images/BG.svg);
+    object-fit: contain;
+    background-position: center;
+}

@@ -1,0 +1,66 @@
+{
+  "name": "deliverea",
+  "version": "0.1.0",
+  "private": true,
+  "author": "David ODonnell <code@davidod.io>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gharnaco/deliverea.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gharnaco/deliverea/issues"
+  },
+  "scripts": {
+    "fmt": "pnpm run fmt:prettier . LICENSE **/LICENSE --write && pnpm run fmt:lint . --fix",
+    "fmt:lint": "eslint  --ignore-path ./.fmtignore --ext .js,.jsx,.ts,.tsx",
+    "fmt:prettier": "prettier --ignore-path ./.fmtignore",
+    "prepare": "husky install",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "16.2.1",
+    "@commitlint/config-conventional": "16.2.1",
+    "eslint": "8.10.0",
+    "eslint-config-prettier": "8.4.0",
+    "eslint-import-resolver-alias": "1.1.2",
+    "eslint-import-resolver-node": "0.3.6",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-react": "7.29.4",
+    "eslint-plugin-react-hooks": "4.4.0",
+    "husky": "7.0.4",
+    "lint-staged": "12.3.4",
+    "prettier": "2.5.1",
+    "typescript": "4.6.3",
+    "@sanity/cli": "2.30.0"
+  },
+  "prettier": {
+    "jsxSingleQuote": false,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "overrides": [
+      {
+        "files": "LICENSE",
+        "options": {
+          "parser": "markdown"
+        }
+      }
+    ]
+  },
+  "commitlint": {
+    "extends": "@commitlint/config-conventional"
+  },
+  "lint-staged": {
+    "*": [
+      "npm run fmt:prettier  --ignore-unknown --write"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "npm run fmt:lint --fix"
+    ]
+  },
+  "workspaces": [
+    "site/*",
+    "studio/*"
+  ]
+}

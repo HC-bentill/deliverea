@@ -1,0 +1,9 @@
+{
+    "idStructure": "delimiter",
+    "referenceBehavior": "strong",
+    "base": "es",
+    "languages": {
+      "query": "*[_type == 'language']{ '_id': code, name }"
+    },
+    "withTranslationsMaintenance": true
+}

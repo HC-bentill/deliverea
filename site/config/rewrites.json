@@ -1,0 +1,27 @@
+[
+  {
+    "source": "/productos",
+    "destination": "/products"
+  },
+  {
+    "source": "/referencias",
+    "destination": "/references"
+  },
+  {
+    "source": "/precios",
+    "destination": "/prices"
+  },
+  {
+    "source": "/recursos",
+    "destination": "/resources"
+  },
+  {
+    "source": "/contacto",
+    "destination": "/contact-us"
+  },
+  {
+    "source": "/prueba",
+    "destination": "/try-it"
+  }
+]
+
